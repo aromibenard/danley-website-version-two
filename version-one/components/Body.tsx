@@ -6,6 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRightIcon } from "@radix-ui/react-icons"
 import Services from "./Services"
+import Partners from "./Partners"
 
 export default function Body() {
     return (
@@ -21,7 +22,7 @@ export default function Body() {
                 value= {'We collect your household & commercial waste reliably through the use of our own trucks, our mobile app, and our network of partner local waste &  haulers. Download the D-Waste Mobile app to get started.'}/>
               
               <motion.div
-                whileHover={{ scale: 1.1, position : 'relative' }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.9 }}
               >
                 <Link
@@ -47,6 +48,7 @@ export default function Body() {
             </motion.div>
           </motion.div>
           <Services/>
+          <Partners/>
       </div>
     )
 }

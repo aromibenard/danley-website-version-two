@@ -1,15 +1,20 @@
 import Image from "next/image"
 import { SubHeading } from "./Heading"
 import Link from "next/link"
+import { motion } from "framer-motion"
+import { ArrowRightIcon } from "@radix-ui/react-icons"
 
 const ServiceGrid = () => {
     return (
-        <div className="grid md:grid-cols-2 gap-6 p-2 my-2 h-[26rem]">
-            <div className="p-2 border rounded-md grid md:grid-cols-2 items-center shadow-md">
+        <div className="grid md:grid-cols-2 gap-6 p-2 my-2">
+            <motion.div 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.9 }}
+                className="p-4 border-2 border-gray-300 grid md:grid-cols-2 items-center shadow-md rounded-md hover:border-purple-400">
                 <div>
                     <SubHeading value={'Garbage Collection & Recycling Services for Residential Clients'}/>
-                    <Link href={'/households'} className="bg-purple-800 text-white p-1 mt-2">
-                        Get the App
+                    <Link href={'/households'} className=" p-2 mt-4 flex items-center">
+                        <p className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 drop-shadow-md hover:scale-110 transition">Get the App</p> <span className="px-3"><ArrowRightIcon className="text-pink-500"/></span>
                     </Link>
                 </div>
                 <Image 
@@ -19,10 +24,61 @@ const ServiceGrid = () => {
                     height={150}
                     className="object-cover w-full"
                 />
-            </div>
-            <div className="p-1 border rounded-md">2</div>
-            <div className="p-1 border rounded-md">3</div>
-            <div className="p-1 border rounded-md">4</div>
+            </motion.div>
+            <motion.div 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.9 }}
+                className="p-4 border-2 border-gray-300 grid md:grid-cols-2 items-center shadow-md rounded-md hover:border-purple-400">
+                <div>
+                    <SubHeading value={'Office Cleaning Services for Commercial Clients'}/>
+                    <Link href={'/office'} className=" p-2 mt-4 flex items-center">
+                        <p className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 drop-shadow-md hover:scale-110 transition">Explore</p> <span className="px-3"><ArrowRightIcon className="text-pink-500"/></span>
+                    </Link>
+                </div>
+                <Image 
+                    src={'/garbage.jpg'}
+                    alt="app demo"
+                    width={200}
+                    height={150}
+                    className="object-cover w-full"
+                />
+            </motion.div>
+            <motion.div 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.9 }}
+                className="p-4 border-2 border-gray-300 grid md:grid-cols-2 items-center shadow-md rounded-md hover:border-purple-400">
+                <div>
+                    <SubHeading value={'Waste Disposal & Recycling for Businesses'}/>
+                    <Link href={'/office'} className=" p-2 mt-4 flex items-center">
+                        <p className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 drop-shadow-md hover:scale-110 transition">Learn More</p> <span className="px-3"><ArrowRightIcon className="text-pink-500"/></span>
+                    </Link>
+                </div>
+                <Image 
+                    src={'/bin.jpeg'}
+                    alt="app demo"
+                    width={200}
+                    height={150}
+                    className="object-cover w-full"
+                />
+            </motion.div>
+            <motion.div 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.9 }}
+                className="p-4 border-2 border-gray-300 grid md:grid-cols-2 items-center shadow-md rounded-md hover:border-purple-400">
+                <div>
+                    <SubHeading value={'Industries'}/>
+                    <Link href={'/office'} className=" p-2 mt-4 flex items-center">
+                        <p className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 drop-shadow-md hover:scale-110 transition">Explore</p> <span className="px-3"><ArrowRightIcon className="text-pink-500"/></span>
+                    </Link>
+                </div>
+                <Image 
+                    src={'/grocery.jpeg'}
+                    alt="app demo"
+                    width={200}
+                    height={150}
+                    className="object-cover w-full"
+                />
+            </motion.div>
         </div>
     )
 }
